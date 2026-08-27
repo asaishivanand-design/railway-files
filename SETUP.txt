@@ -1,0 +1,30 @@
+RAILWAY FILES - QUICK SETUP
+
+1. Install Python 3.10.x.
+
+2. Clone the repository:
+   git clone https://github.com/asaishivanand-design/railway-files.git
+   cd railway-files
+
+3. Install Python dependencies:
+   python -m pip install -r requirements.txt
+
+4. Generate synthetic railway data:
+   python scripts/generate_synthetic_data.py
+
+5. Train the priority models:
+   python ai/priority_model/train.py
+
+6. Evaluate the models:
+   python ai/priority_model/evaluate.py
+
+7. Test a priority prediction:
+   python ai/priority_model/predict.py
+
+8. Run the optimizer:
+   python -m optimizer.scheduler
+
+Notes:
+- The optimizer should be run with `python -m optimizer.scheduler`, not `python optimizer/scheduler.py`, so the optimizer package imports work correctly.
+- The project currently uses Linear Regression and Random Forest for maintenance priority prediction.
+- The optimizer produces data/synthetic/optimized_block_plan.csv.

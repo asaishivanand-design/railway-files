@@ -1,13 +1,26 @@
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
 
-# Virtual environment
+# Python virtual environments
+.venv/
 venv/
+env/
 
 # Environment
 .env
 
-# IDE
+# Model/cache files
+*.pkl
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
 .vscode/
 .idea/
+
+# Logs
+*.log
