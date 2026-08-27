@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: railway_db
+
+    environment:
+      POSTGRES_USER: railway
+      POSTGRES_PASSWORD: railway123
+      POSTGRES_DB: railway_ai
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+
+volumes:
+  postgres_data:
